@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubhajit Kundu | Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Shubhajit Kundu — Junior Web Developer, B.Sc. Computer Science student passionate about building modern web experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="profile.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket">/&gt;</span>
+        </a>
+        <a href="#hero" class="nav-avatar" id="navAvatar" aria-label="Go to top">
+            <div class="nav-avatar-ring"></div>
+            <div class="nav-avatar-ring nav-ring-2"></div>
+            <div class="nav-avatar-glow"></div>
+            <img src="profile.jpg" alt="Shubhajit Kundu">
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+            <a href="#education" class="nav-link" data-section="education">Education</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+        <a href="Shubhajit_Kundu_CV.docx" download class="nav-cta">
+            <i class="fas fa-download"></i> Resume
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting animate-on-scroll">
+                    <span class="greeting-line"></span> Hello, I'm
+                </p>
+                <h1 class="hero-name animate-on-scroll">
+                    Shubhajit<br><span class="name-accent">Kundu</span>
+                </h1>
+                <div class="hero-tagline animate-on-scroll">
+                    <span class="tagline-static">I'm a </span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-description animate-on-scroll">
+                    A passionate Computer Science student crafting modern web experiences 
+                    with clean code and creative design.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        <span>Explore More</span>
+                    </a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="76">0</span><span class="stat-plus">%</span>
+                        <span class="stat-label">Academic Score</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+                <div class="profile-container">
+                    <div class="profile-ring"></div>
+                    <div class="profile-ring ring-2"></div>
+                    <div class="profile-glow"></div>
+                    <img src="profile.jpg" alt="Shubhajit Kundu" class="profile-image">
+                </div>
+                <div class="floating-badge badge-1">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="floating-badge badge-3">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="floating-badge badge-4">
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle"><span class="subtitle-number">01.</span> Get To Know Me</p>
+                <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content animate-on-scroll">
+                    <div class="about-text">
+                        <p>
+                            Hey there! I'm <strong>Shubhajit Kundu</strong>, a 19-year-old B.Sc. Computer Science student 
+                            at <strong>Kalyani University</strong>, West Bengal. My journey in tech started with curiosity 
+                            about how websites work — and that curiosity has grown into a genuine passion for web development.
+                        </p>
+                        <p>
+                            I specialize in front-end development using <strong>HTML, CSS, and JavaScript</strong>, and I'm 
+                            expanding my skills into Python for data handling. I believe in continuous learning and I'm 
+                            always exploring new technologies to stay ahead.
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me exploring AI tools, learning new frameworks, or 
+                            brainstorming creative design ideas. I'm actively seeking opportunities to contribute 
+                            to meaningful projects and grow as a developer.
+                        </p>
+                    </div>
+                    <div class="about-info-cards">
+                        <div class="info-card">
+                            <div class="info-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Murshidabad, West Bengal</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <span class="info-label">Degree</span>
+                                <span class="info-value">B.Sc. Computer Science</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-icon"><i class="fas fa-language"></i></div>
+                            <div>
+                                <span class="info-label">Languages</span>
+                                <span class="info-value">Bengali & English</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-icon"><i class="fas fa-bolt"></i></div>
+                            <div>
+                                <span class="info-label">Focus</span>
+                                <span class="info-value">Web Development & AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual animate-on-scroll">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">about_me.js</span>
+                        </div>
+                        <div class="code-body">
+                            <pre><code><span class="code-keyword">const</span> <span class="code-var">shubhajit</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Shubhajit Kundu"</span>,
+  <span class="code-prop">age</span>: <span class="code-number">19</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Web Developer"</span>,
+  <span class="code-prop">education</span>: <span class="code-string">"B.Sc. CS"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>,
+    <span class="code-string">"JavaScript"</span>,
+    <span class="code-string">"Python"</span>
+  ],
+  <span class="code-prop">passion</span>: <span class="code-string">"Building the web"</span>,
+  <span class="code-prop">motto</span>: <span class="code-string">"Never stop learning"</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle"><span class="subtitle-number">02.</span> What I Know</p>
+                <h2 class="section-title">My <span class="text-gradient">Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-icon-wrapper" style="--accent: #e44d26;">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup, accessibility, SEO-friendly structure</p>
+                    <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-icon-wrapper" style="--accent: #2965f1;">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Responsive design, animations, Flexbox & Grid</p>
+                    <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-icon-wrapper" style="--accent: #f7df1e;">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>DOM manipulation, ES6+, interactive UIs</p>
+                    <div class="skill-bar"><div class="skill-progress" data-width="65"></div></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-icon-wrapper" style="--accent: #306998;">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Data handling with Pandas & NumPy</p>
+                    <div class="skill-bar"><div class="skill-progress" data-width="55"></div></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-icon-wrapper" style="--accent: #00b4d8;">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Tools</h3>
+                    <p>Prompt engineering, vibe coding, AI workflows</p>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-tilt>
+                    <div class="skill-icon-wrapper" style="--accent: #0078d4;">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h3>MS Office</h3>
+                    <p>Word, Excel, PowerPoint, Google Workspace</p>
+                    <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle"><span class="subtitle-number">03.</span> My Journey</p>
+                <h2 class="section-title">Education <span class="text-gradient">Timeline</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-inner"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Currently Pursuing</div>
+                        <h3>B.Sc. Computer Science</h3>
+                        <h4><i class="fas fa-university"></i> Kalyani University</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar"></i> 2025 – 2028</p>
+                        <p class="timeline-score"><i class="fas fa-chart-line"></i> Average: 76%</p>
+                        <p>Studying core CS concepts including programming, data structures, algorithms, and web technologies.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-inner"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Higher Secondary (12th)</h3>
+                        <h4><i class="fas fa-school"></i> WBCHSE Board</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar"></i> Passed in 2024</p>
+                        <p class="timeline-score"><i class="fas fa-chart-line"></i> Score: 72.6%</p>
+                        <p>Completed higher secondary education with focus on science stream.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-inner"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Madhyamik (10th)</h3>
+                        <h4><i class="fas fa-school"></i> WBBSE Board</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar"></i> Passed in 2022</p>
+                        <p class="timeline-score"><i class="fas fa-chart-line"></i> Score: 73%</p>
+                        <p>Strong foundation in mathematics and sciences during secondary education.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle"><span class="subtitle-number">04.</span> Say Hello</p>
+                <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+            </div>
+            <div class="contact-wrapper animate-on-scroll">
+                <div class="contact-info">
+                    <p class="contact-description">
+                        I'm currently looking for new opportunities and my inbox is always open. 
+                        Whether you have a question, a project idea, or just want to say hi — 
+                        I'll get back to you as soon as possible!
+                    </p>
+                    <div class="contact-cards">
+                        <a href="mailto:Shubhajitkundu2@email.com" class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-card-label">Email</span>
+                                <span class="contact-card-value">Shubhajitkundu2@email.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+919647965487" class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="contact-card-label">Phone</span>
+                                <span class="contact-card-value">+91 9647965487</span>
+                            </div>
+                        </a>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="contact-card-label">Location</span>
+                                <span class="contact-card-value">Murshidabad, West Bengal, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/shubhajit-kundu-33546134b" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/x-xshubhajit" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:Shubhajitkundu2@email.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="formName" required placeholder=" ">
+                        <label for="formName">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="formEmail" required placeholder=" ">
+                        <label for="formEmail">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="formMessage" rows="4" required placeholder=" "></textarea>
+                        <label for="formMessage">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Shubhajit Kundu<span class="logo-bracket">/&gt;</span>
+                </p>
+                <p class="footer-text">Designed & Built with <span class="heart">&hearts;</span> by Shubhajit Kundu</p>
+                <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
